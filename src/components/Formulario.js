@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 const Campo = styled.div`
   display: flex;
-  margin-bottom: 1rem,
+  margin-bottom: 1rem;
   align-items: center;
 `;
 
@@ -21,6 +21,23 @@ const Select = styled.select`
 
 const InputRadio = styled.input`
   margin: 0 1rem;
+`;
+
+const Boton = styled.button`
+  background-color: #00838f;
+  font-size: 16px;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #26c6da;
+    cursor: pointer;
+  }
 `;
 
 const Formulario = () => {
@@ -60,7 +77,7 @@ const Formulario = () => {
           <InputRadio type="radio" name="plan" id="" value="completo" />{" "}
           Completo
         </Campo>
-        <button>Cotizar</button>
+        <Boton>Cotizar</Boton>
       </form>
     </div>
   );
