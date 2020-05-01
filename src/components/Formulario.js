@@ -50,7 +50,7 @@ const Error = styled.div`
   margin-bottom: 2rem;
 `;
 
-const Formulario = () => {
+const Formulario = ({ guardarResumen }) => {
   //State
   const [datos, guardarDatos] = useState({
     marca: "",
@@ -99,7 +99,11 @@ const Formulario = () => {
     //Completo 50%
     resultado = parseFloat(resultado * calcularPlan(plan).toFixed(2));
 
-    //Total
+    //Pasar el resultado final al componente App
+    guardarResumen({
+      cotizacion: resultado,
+      datos,
+    });
   };
 
   return (
